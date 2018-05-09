@@ -25,9 +25,10 @@
   "homepage": "https://github.com/LJEsp/project-ama-redesign#readme",
   "devDependencies": {
     "autoprefixer": "*",
-    "concat": "*",
+    "concat": "^3.0.0",
     "node-sass": "*",
     "npm-run-all": "*",
     "postcss-cli": "*"
-  }
+  },
+  "dependencies": {}
 }
