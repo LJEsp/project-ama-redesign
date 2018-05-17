@@ -1,0 +1,48 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-feed {
+  width: 0.7861328125em;
+}
+
+.icon-user {
+  width: 0.7138671875em;
+}
+
+.icon-book {
+  width: 0.9306640625em;
+}
+
+.icon-edit {
+  width: 1.0009765625em;
+}
+
+.icon-microphone {
+  width: 0.642578125em;
+}
+
+.icon-line-chart {
+  width: 1.142578125em;
+}
+
+.icon-cog {
+  width: 0.857421875em;
+}
+
+.icon-laptop {
+  width: 1.0712890625em;
+}

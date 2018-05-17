@@ -77,9 +77,6 @@ select {
 
   box-sizing: border-box;
 
-  /*  specifies the height of line boxes within the element. */
-  line-height: 1;
-
   border-radius: 0;
 
   /* no outline around anything */

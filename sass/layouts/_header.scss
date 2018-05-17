@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  padding: 2rem 7rem 0rem 7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: auto;
+  height: 10rem;
+}
+
+.header-nav {
+
+  a {
+    padding: 1rem;
+
+    &:hover {
+      color: $colorRed;
+    }
+  }
+
+  a:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
