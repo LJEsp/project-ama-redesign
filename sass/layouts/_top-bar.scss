@@ -1,0 +1,49 @@
+.top-bar {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 1000px;
+  width: 75%;
+  height: 6rem;
+  background-color: $colorRed;
+  color: $colorWhite;
+  z-index: 0;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.top-bar-left,
+.top-bar-mid,
+.top-bar-right {
+  margin-top: 2rem;
+  color: $colorWhite;
+  padding: 1rem;
+}
+
+.top-bar-left {
+  display: flex;
+  margin-left: 4rem;
+
+  p {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+  }
+
+  svg {
+    margin-right: 1rem;
+  }
+}
+
+.top-bar-right {
+  margin-right: 2rem;
+
+  svg {
+    margin-left: 1rem;
+  }
+}

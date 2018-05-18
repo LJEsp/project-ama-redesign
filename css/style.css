@@ -155,10 +155,11 @@ body {
     box-sizing: inherit; }
 
 html {
-  background-image: linear-gradient(to top, #aaaaaa -50%, #eeeeee);
+  background-image: linear-gradient(to top, #dddddd -50%, #fafafafa);
   background-attachment: fixed; }
 
 body {
+  position: relative;
   background-color: #ffffff;
   margin: 0 auto;
   width: 75%;
@@ -231,12 +232,50 @@ This file is used to contain all layout imports.
 Files inside this folder should contain all styles relating
 to layouts.
 */
+.top-bar {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 1000px;
+  width: 75%;
+  height: 6rem;
+  background-color: #8d0404;
+  color: #ffffff;
+  z-index: 0; }
+  .top-bar svg {
+    width: 2rem;
+    height: 2rem; }
+
+.top-bar-left,
+.top-bar-mid,
+.top-bar-right {
+  margin-top: 2rem;
+  color: #ffffff;
+  padding: 1rem; }
+
+.top-bar-left {
+  display: flex;
+  margin-left: 4rem; }
+  .top-bar-left p {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem; }
+  .top-bar-left svg {
+    margin-right: 1rem; }
+
+.top-bar-right {
+  margin-right: 2rem; }
+  .top-bar-right svg {
+    margin-left: 1rem; }
+
 .header {
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 7rem 0rem 7rem;
+  padding: 3rem 7rem 0rem 7rem;
   background-color: #ffffff;
   z-index: 100; }
 
@@ -260,7 +299,6 @@ to layouts.
   opacity: 0;
   position: absolute;
   left: -1rem;
-  background-color: #eeeeee;
   z-index: 5;
   transform: translateY(0.5rem);
   transition: all 0.1s;
@@ -270,12 +308,12 @@ to layouts.
   .dropdown-admissions li a {
     display: block;
     white-space: nowrap;
-    background-color: #eeeeee;
+    background-color: #fafafafa;
     padding: 1.5rem 2rem; }
     .dropdown-about li a:hover,
     .dropdown-programs li a:hover,
     .dropdown-admissions li a:hover {
-      background-color: #dddddd; }
+      background-color: #eeeeee; }
 
 .nav-about:hover > .dropdown-about,
 .nav-about:focus-within > .dropdown-about,
@@ -478,3 +516,26 @@ to a reusable component.
     padding-right: 3.2rem;
     border: 2px solid #8d0404;
     background-color: rgba(141, 4, 4, 0.6); }
+
+.button-start {
+  display: block;
+  position: relative;
+  z-index: 4; }
+  .button-start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #8d0404;
+    transform: scaleX(0);
+    transition: all 0.1s ease-out;
+    z-index: -1; }
+  .button-start:hover::before {
+    transform: scaleX(1); }
+  .button-start:hover {
+    color: #8d0404;
+    font-weight: 700;
+    transform: scale(1.1); }
