@@ -6,7 +6,7 @@
   position: absolute;
   top: 4rem;
   margin-left: 10%;
-  width: 30vw;
+  width: 35vw;
   max-width: 50rem;
   transform: translateY(-5rem);
   @include shadow;
@@ -33,10 +33,6 @@
   @media screen and (max-width: $bpSmaller6) {
     grid-template-columns: 1fr;
     padding-bottom: 3rem;
-  }
-
-  @media screen and (max-width: $bpSmaller8) {
-    padding: 6rem 3rem 3rem 3rem;
   }
 }
 
