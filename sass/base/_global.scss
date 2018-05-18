@@ -5,15 +5,24 @@ body {
   box-sizing: border-box;
 
   font-size: 62.5%;
-  
+  // transition: all 0.1s;
+
   * {
     box-sizing: inherit;
   }
 }
 
+html {
+  // background-color: $colorGreyLight3;
+  // background-image: linear-gradient(to top, $colorRedDark2 -50%, $colorRedDark);
+  background-image: linear-gradient(to top, $colorGreyLight -50%, $colorGreyLight3);
+  background-attachment: fixed;
+}
+
 body {
+  background-color: $colorWhite;
   margin: 0 auto;
-  width: 80vw;
-  height: 200rem;
+  width: 75%;
+  max-width: 140rem;
   @include shadow;
 }

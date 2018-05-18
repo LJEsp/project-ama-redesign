@@ -16,6 +16,10 @@
   <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+      <symbol id="icon-caret-down" viewBox="0 0 16 28">
+        <title>caret-down</title>
+        <path d="M16 11c0 0.266-0.109 0.516-0.297 0.703l-7 7c-0.187 0.187-0.438 0.297-0.703 0.297s-0.516-0.109-0.703-0.297l-7-7c-0.187-0.187-0.297-0.438-0.297-0.703 0-0.547 0.453-1 1-1h14c0.547 0 1 0.453 1 1z"></path>
+      </symbol>
       <symbol id="icon-feed" viewBox="0 0 22 28">
         <title>feed</title>
         <path d="M6 21c0 1.656-1.344 3-3 3s-3-1.344-3-3 1.344-3 3-3 3 1.344 3 3zM14 22.922c0.016 0.281-0.078 0.547-0.266 0.75-0.187 0.219-0.453 0.328-0.734 0.328h-2.109c-0.516 0-0.938-0.391-0.984-0.906-0.453-4.766-4.234-8.547-9-9-0.516-0.047-0.906-0.469-0.906-0.984v-2.109c0-0.281 0.109-0.547 0.328-0.734 0.172-0.172 0.422-0.266 0.672-0.266h0.078c3.328 0.266 6.469 1.719 8.828 4.094 2.375 2.359 3.828 5.5 4.094 8.828zM22 22.953c0.016 0.266-0.078 0.531-0.281 0.734-0.187 0.203-0.438 0.313-0.719 0.313h-2.234c-0.531 0-0.969-0.406-1-0.938-0.516-9.078-7.75-16.312-16.828-16.844-0.531-0.031-0.938-0.469-0.938-0.984v-2.234c0-0.281 0.109-0.531 0.313-0.719 0.187-0.187 0.438-0.281 0.688-0.281h0.047c5.469 0.281 10.609 2.578 14.484 6.469 3.891 3.875 6.188 9.016 6.469 14.484z"></path>
@@ -51,10 +55,102 @@
     </defs>
   </svg>
 
+  <!-- //////////////////////// HEADER //////////////////////// -->
   <header class="header">
-    <img src="img/logo-ama.png" alt="AMA logo" class="header-logo">
+    <a href="#">
+      <img src="img/logo-ama.png" alt="AMA logo" class="header-logo">
+    </a>
 
-    <nav class="header-nav">
+    <nav>
+      <ul class="header-nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="nav-about">
+          <a href="#">About
+            <svg class="caret">
+              <use xlink:href="#icon-caret-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-about">
+            <li>
+              <a href="#">About AMA University</a>
+            </li>
+            <li>
+              <a href="#">Vision and Missions</a>
+            </li>
+            <li>
+              <a href="#">Our Reputation</a>
+            </li>
+            <li>
+              <a href="#">Message from the Chairman & Vice Chairman</a>
+            </li>
+            <li>
+              <a href="#">AMA University Hymn</a>
+            </li>
+            <li>
+              <a href="#">AMA University Students and Alumni</a>
+            </li>
+            <li>
+              <a href="#">Investors</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-programs">
+          <a href="#">Programs
+            <svg class="caret">
+              <use xlink:href="#icon-caret-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-programs">
+            <li>
+              <a href="#">College (Undergraduate)</a>
+            </li>
+            <li>
+              <a href="#">Graduate &mdash; Masteral, Doctorate</a>
+            </li>
+            <li>
+              <a href="#">Online Education (AMA Oed)</a>
+            </li>
+            <li>
+              <a href="#">AMA Senior High</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-admissions">
+          <a href="#">Admissions
+            <svg class="caret">
+              <use xlink:href="#icon-caret-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-admissions">
+            <li>
+              <a href="#">For College Programs</a>
+            </li>
+            <li>
+              <a href="#">For Graduate Programs</a>
+            </li>
+            <li>
+              <a href="#">For Senior High School</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">ABET Programs</a>
+        </li>
+        <li>
+          <a href="#">Industry Linkages</a>
+        </li>
+        <li>
+          <a href="#">News</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <nav class="header-nav">
       <a href="">Home</a>
       <a href="">About</a>
       <a href="">Programs</a>
@@ -63,20 +159,24 @@
       <a href="">Industry Linkages</a>
       <a href="">News</a>
       <a href="">Contact Us</a>
-    </nav>
+    </nav> -->
   </header>
 
+  <!-- //////////////////////// GALLERY //////////////////////// -->
   <section class="gallery u-margin-bottom-m">
     <div class="gallery-content">
       <img class="gallery-image" src="img/amaoed.jpg" alt="Campus">
       <div class="gallery-text">
-        <h1 class="h1 h1--white u-margin-bottom-s">Lorem ipsum dolor</h1>
-        <p class="p p--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum numquam corrupti, sed ducimus iste minima quae ullam
-          voluptatum magnam porro distinctio autem quisquam! Quo facilis sed nemo perspiciatis debitis pariatur.</p>
+        <h1 class="h1 h1--white u-margin-bottom-s">Get a College
+          <br>Online Degree</h1>
+        <p class="p p--white u-margin-bottom-m">Offers full quality online education to anyone who wishes to advance their careers and obtain their diplomas, by
+          continuously learning anytime and anywhere</p>
+        <a class="button" href="#">Register Now</a>
       </div>
     </div>
   </section>
 
+  <!-- //////////////////////// WELCOME //////////////////////// -->
   <section class="section-welcome u-margin-bottom-l">
     <h1 class="h1 h1--red u-margin-bottom-m">Welcome to AMA University</h1>
 
@@ -85,92 +185,191 @@
 
   <div class="rule"></div>
 
-  <section class="section-programs">
-    <h1 class="h2 h2--blue u-margin-bottom-l">Programs Offered</h1>
+  <!-- //////////////////////// PROGRAMS //////////////////////// -->
+  <section class="section-programs u-margin-bottom-xl">
+    <h1 class="h2 h2--blue u-margin-bottom-s">Programs Offered</h1>
 
-    <div class="programs-container">
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-laptop"></use>
-          </svg>
-        </div>
-        <p class="program-text-1 p--bold">College of Computer Studies</p>
-        <p class="program-text-2">BSIT, BSCS, BSIS</p>
-      </div>
+    <h3 class="h3 u-margin-bottom-l">Offering Senior High School, Bachelor’s Degree, Graduate Programs and Online Education (Distance Learning)</h2>
 
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-cog"></use>
-          </svg>
-        </div>
-        <p class="program-text-1 p--bold">College of Engineering</p>
-        <p class="program-text-2">BSCpE, BSEE, BSIE</p>
-      </div>
-
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-line-chart"></use>
-          </svg>
+      <div class="programs-container">
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-laptop"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">College of Computer Studies</p>
+          <p class="program-text-2">BSIT, BSCS, BSIS</p>
         </div>
 
-        <p class="program-text-1 p--bold">College of Business Administration</p>
-        <p class="program-text-2">Business Administration, Accountancy</p>
-      </div>
-
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-microphone"></use>
-          </svg>
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-cog"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">College of Engineering</p>
+          <p class="program-text-2">BSCpE, BSEE, BSIE</p>
         </div>
-        <p class="program-text-1 p--bold">College of Arts and Sciences</p>
-        <p class="program-text-2">English, Economics, Psychology, Mass&nbsp;Comm</p>
-      </div>
 
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-edit"></use>
-          </svg>
-        </div>
-        <p class="program-text-1 p--bold">Master's Degree</p>
-        <p class="program-text-2">MBA, MSIT, MSCS, MACoEd</p>
-      </div>
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-line-chart"></use>
+            </svg>
+          </div>
 
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-book"></use>
-          </svg>
+          <p class="program-text-1 p--bold">College of Business Administration</p>
+          <p class="program-text-2">Business Administration, Accountancy</p>
         </div>
-        <p class="program-text-1 p--bold">Doctorate Degree</p>
-        <p class="program-text-2">Doctor in Business Administration, Doctor in Information Technology</p>
-      </div>
 
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-user"></use>
-          </svg>
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-microphone"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">College of Arts and Sciences</p>
+          <p class="program-text-2">English, Economics, Psychology, Mass&nbsp;Comm</p>
         </div>
-        <p class="program-text-1 p--bold">Senior High School</p>
-        <p class="program-text-2">Academic, TVL, Sports, Arts and Design</p>
-      </div>
 
-      <div class="program-box">
-        <div class="program-icon-box">
-          <svg class="program-icon">
-            <use xlink:href="#icon-feed"></use>
-          </svg>
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-edit"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">Master's Degree</p>
+          <p class="program-text-2">MBA, MSIT, MSCS, MACoEd</p>
         </div>
-        <p class="program-text-1 p--bold">Online Education</p>
-        <p class="program-text-2">AMA University Online Education (AMA&nbsp;OEd)</p>
+
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-book"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">Doctorate Degree</p>
+          <p class="program-text-2">Doctor in Business Administration, Doctor in Information Technology</p>
+        </div>
+
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-user"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">Senior High School</p>
+          <p class="program-text-2">Academic, TVL, Sports, Arts and Design</p>
+        </div>
+
+        <div class="program-box">
+          <div class="program-icon-box">
+            <svg class="program-icon">
+              <use xlink:href="#icon-feed"></use>
+            </svg>
+          </div>
+          <p class="program-text-1 p--bold">Online Education</p>
+          <p class="program-text-2">AMA University Online Education (AMA&nbsp;OEd)</p>
+        </div>
       </div>
+  </section>
+
+  <!-- //////////////////////// REASONS //////////////////////// -->
+  <div class="section-reasons-box u-margin-bottom-l">
+    <img class="section-reasons-image" src="img/reason.jpg" alt="AMA building">
+
+    <section class="section-reasons">
+      <div></div>
+
+      <div class="reasons-content">
+        <h2 class="h2 h2--bold h2--blue u-margin-bottom-s">5 Reasons Why AMA</h2>
+
+        <div class="u-margin-bottom-m">
+          <h3 class="h3">1. A pioneer in the field of IT education</h3>
+          <h3 class="h3">2. Quality Graduates</h3>
+          <h3 class="h3">3. Reputable Industry Partners</h3>
+          <h3 class="h3">4. Advanced Learning Method</h3>
+          <h3 class="h3">5. Highly Accredited</h3>
+        </div>
+
+        <a href="#" class="button u-margin-bottom-m">Read More</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- //////////////////////// REPUTATION //////////////////////// -->
+  <section class="section-reputation u-margin-bottom-l">
+    <div class="reputation-box">
+      <img src="img/reputation-1.jpg" alt="">
+      <p class="reputation-text-1 p--bold">Our Reputation</p>
+      <p class="reputation-text-2">ISO 9001:2008 Certified for all programs; Recognized as Center of Development in Information Technology by CHED.</p>
+    </div>
+
+    <div class="reputation-box">
+      <img src="img/reputation-2.jpg" alt="">
+      <p class="reputation-text-1 p--bold">Vision and Mission</p>
+      <p class="reputation-text-2">AMA will be the leader and dominant provider of relevant globally recognized information technology-based education
+        and related services in the global market.</p>
+    </div>
+
+    <div class="reputation-box">
+      <img src="img/reputation-3.jpg" alt="">
+      <p class="reputation-text-1 p--bold">Inside the Campus</p>
+      <p class="reputation-text-2">College buildings, gymnasium, audio visual room, super lab..</p>
     </div>
   </section>
+
+  <section class="section-abet u-margin-bottom-m">
+    <p class="p--white p--bold">AMA University is certified by</p>
+    <img class="abet-logo" src="img/abet-logo.png" alt="ABET logo">
+  </section>
+
+  <!-- //////////////////////// CONTACT US //////////////////////// -->
+  <section class="section-contact u-margin-bottom-xl">
+    <h1 class="h1 h1--red  u-margin-bottom-s">Contact us:</h1>
+    <h2 class="h2 u-margin-bottom-l">(02) 359-0262 • (02) 330-0378 • (02) 496-17363</h2>
+    <img class="u-margin-bottom-m" src="img/logo-ama.png" alt="AMA logo">
+    <p class="u-margin-bottom-m">AMA University now offers full online education, your best option to earn an online degree.</p>
+    <p>Address: Maximina St., Villa Arca Subdivision Proj. 8, Quezon City</p>
+  </section>
+
+  <!-- //////////////////////// FOOTER //////////////////////// -->
+  <footer class="footer">
+    <div class="footer-grid u-margin-bottom-l">
+      <div class="footer-info">
+        <img class="u-margin-bottom-s" src="img/logo-ama.png" alt="AMA logo">
+        <p>(02) 359-0262 | (02) 330-0378 | (02) 496-17363</p>
+        <p>info@amaes.edu.ph</p>
+      </div>
+
+      <div class="footer-links">
+        <p>Programs</p>
+        <a href="#">College</a>
+        <a href="#">Graduate (Masteral)</a>
+        <a href="#">Senior High</a>
+        <a href="#">ABET Programs</a>
+        <a href="#">Online Education</a>
+      </div>
+
+      <div class="footer-links">
+        <p>Admissions</p>
+        <a href="#">For Senior High School</a>
+        <a href="#">For Graduate Programs</a>
+        <a href="#">For College Programs</a>
+      </div>
+
+      <div class="footer-links">
+        <p>Links</p>
+        <a href="#">AMA Education System</a>
+        <a href="#">AMA News</a>
+        <a href="#">Investors</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+
+    <a href="https://github.com/LJEsp/project-ama-redesign" class="copyright" target="_blank">https://github.com/LJEsp/project-ama-redesign</a>
+  </footer>
 </body>
 
 </html>

@@ -1,8 +1,12 @@
 .header {
+  // position: sticky;
+  top: 0;
   display: flex;
-  padding: 2rem 7rem 0rem 7rem;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 7rem 0rem 7rem;
+  background-color: $colorWhite;
+  z-index: 100;
 }
 
 .header-logo {
@@ -11,16 +15,71 @@
 }
 
 .header-nav {
+  display: flex;
 
-  a {
+  & > li {
+    position: relative;
+  }
+
+  & > li a {
     padding: 1rem;
+  }
+
+  & > li a:hover {
+    color: $colorRed;
+  }
+
+  // & > li:not(:last-child) {
+  //   margin-right: 2rem;
+  // }
+}
+
+.dropdown-about,
+.dropdown-programs,
+.dropdown-admissions {
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -1rem;
+  background-color: $colorGreyLight3;
+  z-index: 5;
+  transform:translateY(0.5rem);
+  transition: all 0.1s;
+  @include shadow;
+
+  li a{
+    display: block;
+    white-space: nowrap;
+    background-color: $colorGreyLight3;
+    padding: 1.5rem 2rem;
 
     &:hover {
-      color: $colorRed;
+      background-color: $colorGreyLight2;
     }
   }
 
-  a:not(:last-child) {
-    margin-right: 1rem;
-  }
+  // li:not(:last-child) {
+  //   margin-bottom: 2rem;
+  // }
+}
+
+.nav-about:hover > .dropdown-about,
+.nav-about:focus-within > .dropdown-about,
+.nav-programs:hover > .dropdown-programs,
+.nav-programs:focus-within > .dropdown-programs,
+.nav-admissions:hover > .dropdown-admissions,
+.nav-admissions:focus-within > .dropdown-admissions,
+.dropdown-about:hover,
+.dropdown-programs:hover,
+.dropodwn-admissions:hover {
+  // display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.caret {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
 }

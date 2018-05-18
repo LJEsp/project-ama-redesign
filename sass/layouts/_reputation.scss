@@ -1,0 +1,22 @@
+.section-reputation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+}
+
+.reputation-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+
+  img {
+    margin-bottom: 1rem;
+    transition: all 0.1s;
+    cursor: pointer;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

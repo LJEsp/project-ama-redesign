@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100.05%;
   height: 50rem;
 }
 
@@ -19,9 +19,9 @@
 .gallery-image {
   @include shadow;
   margin-right: 3rem;
-  width: 30rem;
+  width: 40rem;
 }
 
 .gallery-text {
-  width: 40rem;
+  width: 45rem;
 }

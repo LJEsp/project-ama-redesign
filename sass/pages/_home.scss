@@ -1,9 +1,33 @@
 .section-welcome {
   padding: 0 7rem;
   text-align: center;
-
 }
 
 .section-programs {
+  text-align: center;
+  padding: 0 10rem;
+}
+
+.section-reasons {
+}
+
+.section-reputation {
+  padding: 0 10rem;
+}
+
+.section-abet {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100.05%;
+  height: 40rem;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background-image: url(../img/abet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-contact {
   text-align: center;
 }

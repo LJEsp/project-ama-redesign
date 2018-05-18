@@ -9,7 +9,7 @@ body {
   font-size: 4rem;
   font-weight: 300;
   &--white {
-    color: #fff;
+    color: $colorWhite;
   }
   &--red {
     color: $colorRed;
@@ -21,6 +21,16 @@ body {
   &--blue {
     color: $colorBlue;
   }
+  &--red {
+    color: $colorRed;
+  }
+  &--white {
+    color: $colorWhite;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+
 }
 
 .h3 {
@@ -29,7 +39,7 @@ body {
 
 .p {
   &--white {
-    color: #fff;
+    color: $colorWhite;
     line-height: 1.5;
   }
 

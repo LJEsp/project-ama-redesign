@@ -130,6 +130,9 @@ helpers or functions. They have no direct output.
 .u-margin-bottom-l {
   margin-bottom: 4rem; }
 
+.u-margin-bottom-xl {
+  margin-bottom: 6rem; }
+
 .rule {
   margin: 0 auto;
   margin-bottom: 3rem;
@@ -151,10 +154,15 @@ body {
   body * {
     box-sizing: inherit; }
 
+html {
+  background-image: linear-gradient(to top, #aaaaaa -50%, #eeeeee);
+  background-attachment: fixed; }
+
 body {
+  background-color: #ffffff;
   margin: 0 auto;
-  width: 80vw;
-  height: 200rem;
+  width: 75%;
+  max-width: 140rem;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3); }
 
 body {
@@ -167,7 +175,7 @@ body {
   font-size: 4rem;
   font-weight: 300; }
   .h1--white {
-    color: #fff; }
+    color: #ffffff; }
   .h1--red {
     color: #8d0404; }
 
@@ -175,12 +183,18 @@ body {
   font-size: 3rem; }
   .h2--blue {
     color: #082aa9; }
+  .h2--red {
+    color: #8d0404; }
+  .h2--white {
+    color: #ffffff; }
+  .h2--bold {
+    font-weight: 700; }
 
 .h3 {
   font-size: 2rem; }
 
 .p--white {
-  color: #fff;
+  color: #ffffff;
   line-height: 1.5; }
 
 .p--bold {
@@ -191,6 +205,25 @@ body {
   text-align: center; }
 
 .section-programs {
+  text-align: center;
+  padding: 0 10rem; }
+
+.section-reputation {
+  padding: 0 10rem; }
+
+.section-abet {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100.05%;
+  height: 40rem;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background-image: url(../img/abet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.section-contact {
   text-align: center; }
 
 /*
@@ -199,22 +232,99 @@ Files inside this folder should contain all styles relating
 to layouts.
 */
 .header {
+  top: 0;
   display: flex;
-  padding: 2rem 7rem 0rem 7rem;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding: 2rem 7rem 0rem 7rem;
+  background-color: #ffffff;
+  z-index: 100; }
 
 .header-logo {
   width: auto;
   height: 10rem; }
 
-.header-nav a {
-  padding: 1rem; }
-  .header-nav a:hover {
+.header-nav {
+  display: flex; }
+  .header-nav > li {
+    position: relative; }
+  .header-nav > li a {
+    padding: 1rem; }
+  .header-nav > li a:hover {
     color: #8d0404; }
 
-.header-nav a:not(:last-child) {
-  margin-right: 1rem; }
+.dropdown-about,
+.dropdown-programs,
+.dropdown-admissions {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -1rem;
+  background-color: #eeeeee;
+  z-index: 5;
+  transform: translateY(0.5rem);
+  transition: all 0.1s;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3); }
+  .dropdown-about li a,
+  .dropdown-programs li a,
+  .dropdown-admissions li a {
+    display: block;
+    white-space: nowrap;
+    background-color: #eeeeee;
+    padding: 1.5rem 2rem; }
+    .dropdown-about li a:hover,
+    .dropdown-programs li a:hover,
+    .dropdown-admissions li a:hover {
+      background-color: #dddddd; }
+
+.nav-about:hover > .dropdown-about,
+.nav-about:focus-within > .dropdown-about,
+.nav-programs:hover > .dropdown-programs,
+.nav-programs:focus-within > .dropdown-programs,
+.nav-admissions:hover > .dropdown-admissions,
+.nav-admissions:focus-within > .dropdown-admissions,
+.dropdown-about:hover,
+.dropdown-programs:hover,
+.dropodwn-admissions:hover {
+  opacity: 1;
+  visibility: visible; }
+
+.caret {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle; }
+
+.footer {
+  background-color: #222222;
+  padding: 5rem 7rem;
+  color: #aaaaaa; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: max-content repeat(3, 1fr);
+  grid-gap: 2rem;
+  justify-items: center; }
+  .footer-grid img {
+    height: 10rem; }
+
+.footer-links {
+  display: flex;
+  flex-flow: column; }
+  .footer-links p {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem; }
+  .footer-links a {
+    margin-bottom: 1rem; }
+    .footer-links a:hover {
+      text-decoration: underline; }
+
+.footer-info p {
+  margin-bottom: 1rem; }
+
+.copyright {
+  display: block;
+  text-align: center; }
 
 .gallery {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
@@ -225,7 +335,7 @@ to layouts.
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100.05%;
   height: 50rem; }
 
 .gallery-content {
@@ -235,13 +345,12 @@ to layouts.
 .gallery-image {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3);
   margin-right: 3rem;
-  width: 30rem; }
-
-.gallery-text {
   width: 40rem; }
 
+.gallery-text {
+  width: 45rem; }
+
 .programs-container {
-  padding: 0 10rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1rem;
@@ -253,25 +362,119 @@ to layouts.
   align-items: center; }
 
 .program-icon-box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5rem;
   width: 8rem;
   height: 8rem;
-  border-radius: 100rem;
-  background-color: #8d0404; }
+  cursor: pointer; }
+  .program-icon-box::before {
+    content: " ";
+    background-color: #8d0404;
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100rem;
+    transition: all 0.2s ease; }
+  .program-icon-box:hover::before {
+    width: 0;
+    height: 0;
+    opacity: 0; }
+  .program-icon-box:hover .program-icon {
+    fill: #8d0404; }
+  .program-icon-box::after {
+    content: " ";
+    position: absolute;
+    border: 2px solid #8d0404;
+    border-radius: 100rem;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all 0.2s ease; }
+  .program-icon-box:hover::after {
+    width: 8rem;
+    height: 8rem;
+    opacity: 1; }
 
 .program-icon {
   fill: #ffffff;
   width: 3.5rem;
-  height: 3.5rem; }
+  height: 3.5rem;
+  z-index: 3;
+  transition: all 0.2s ease; }
 
 .program-text-1 {
   margin-bottom: 1rem; }
+
+.section-reasons-box {
+  position: relative; }
+
+.section-reasons-image {
+  position: absolute;
+  top: 4rem;
+  margin-left: 10%;
+  width: 30vw;
+  max-width: 50rem;
+  transform: translateY(-5rem);
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3);
+  z-index: 2; }
+
+.section-reasons {
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background-image: linear-gradient(to top right, #dddddd, #eeeeee);
+  padding: 5rem;
+  width: 100.05%;
+  display: grid;
+  grid-template-columns: calc(10% + 30vw) 1fr;
+  justify-items: center; }
+
+.reasons-content h3 {
+  margin-bottom: 1rem; }
+
+.section-reputation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem; }
+
+.reputation-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center; }
+  .reputation-box img {
+    margin-bottom: 1rem;
+    transition: all 0.1s;
+    cursor: pointer; }
+  .reputation-box p {
+    margin-bottom: 1rem; }
 
 /*
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating
 to a reusable component.
 */
+.button {
+  position: relative;
+  display: inline-block;
+  border: 2px solid transparent;
+  background-color: #8d0404;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.1s; }
+  .button::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: all 0.1s; }
+  .button:hover::after {
+    content: " >";
+    opacity: 1;
+    transform: translateX(0.5rem); }
+  .button:hover {
+    padding-right: 3.2rem;
+    border: 2px solid #8d0404;
+    background-color: rgba(141, 4, 4, 0.6); }
