@@ -2,6 +2,13 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem;
+
+  @media screen and (max-width: $bpSmaller5) {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+
+  }
+  
 }
 
 .reputation-box {
@@ -10,10 +17,23 @@
   align-items: center;
   text-align: center;
 
+  @media screen and (max-width: $bpSmaller5) {
+    flex-flow: row;
+    text-align: left;
+  }
+
   img {
     margin-bottom: 1rem;
     transition: all 0.1s;
     cursor: pointer;
+
+    @media screen and (max-width: $bpSmaller5) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+
+      width: 30vw;
+
+    }
   }
 
   p {

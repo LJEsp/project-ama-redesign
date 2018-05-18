@@ -10,12 +10,24 @@ body {
   * {
     box-sizing: inherit;
   }
+
+  @media screen and (max-width: $bpSmaller3) {
+    font-size: 56.25%;
+  }
+
+  @media screen and (max-width: $bpSmaller8) {
+    font-size: 50%;
+  }
 }
 
 html {
   // background-color: $colorGreyLight3;
   // background-image: linear-gradient(to top, $colorRedDark2 -50%, $colorRedDark);
-  background-image: linear-gradient(to top, $colorGreyLight2 -50%, $colorGreyLight4);
+  background-image: linear-gradient(
+    to top,
+    $colorGreyLight2 -50%,
+    $colorGreyLight4
+  );
   background-attachment: fixed;
 }
 
@@ -24,6 +36,11 @@ body {
   background-color: $colorWhite;
   margin: 0 auto;
   width: 75%;
-  max-width: 140rem;
+  min-width: 140rem;
   @include shadow;
+
+  @media screen and (max-width: $bpSmaller1) {
+    width: 100%;
+    min-width: unset;
+  }
 }

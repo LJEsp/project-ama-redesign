@@ -11,6 +11,18 @@
   color: $colorWhite;
   z-index: 0;
 
+  @media screen and (max-width: $bpSmaller4) {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    position: static;
+    top: 0;
+    height: 4rem;
+  }
+
+  @media screen and (max-width: $bpSmaller7) {
+    display: none;
+  }
+
   svg {
     width: 2rem;
     height: 2rem;
@@ -23,16 +35,27 @@
   margin-top: 2rem;
   color: $colorWhite;
   padding: 1rem;
+
+  @media screen and (max-width: $bpSmaller4) {
+    margin-top: 0%;
+  }
 }
 
 .top-bar-left {
   display: flex;
   margin-left: 4rem;
 
+  @media screen and (max-width: $bpSmaller4) {
+    margin-left: 0rem;
+  }
+
+
+
   p {
     display: flex;
     align-items: center;
     margin-left: 2rem;
+
   }
 
   svg {
@@ -45,5 +68,11 @@
 
   svg {
     margin-left: 1rem;
+  }
+}
+
+.top-bar-mid {
+  @media screen and (max-width: $bpSmaller4) {
+    display: none;
   }
 }

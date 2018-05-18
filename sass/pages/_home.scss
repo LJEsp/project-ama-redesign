@@ -1,11 +1,23 @@
 .section-welcome {
   padding: 0 7rem;
   text-align: center;
+
+  @media screen and (max-width: $bpSmaller8) {
+    padding: 0 3rem;
+  }
 }
 
 .section-programs {
   text-align: center;
   padding: 0 10rem;
+
+  @media screen and (max-width: $bpSmaller4) {
+    padding: 0 5rem;
+  }
+
+  @media screen and (max-width: $bpSmaller8) {
+    padding: 0 3rem;
+  }
 }
 
 .section-reasons {
@@ -13,6 +25,13 @@
 
 .section-reputation {
   padding: 0 10rem;
+
+  @media screen and (max-width: $bpSmaller4) {
+    padding: 0 5rem;
+  }
+  @media screen and (max-width: $bpSmaller8) {
+    padding: 0 3rem;
+  }
 }
 
 .section-abet {
@@ -28,6 +47,22 @@
   background-size: cover;
 }
 
+.abet-logo {
+  @media screen and (max-width: $bpSmaller6) {
+    width: 80vw;
+  }
+}
+
 .section-contact {
   text-align: center;
+  padding: 0 5rem;
+
+  img {
+    width: 50vw;
+    max-width: 30rem;
+  }
+
+  @media screen and (max-width: $bpSmaller8) {
+    padding: 0 3rem;
+  }
 }

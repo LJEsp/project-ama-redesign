@@ -10,8 +10,19 @@
   // grid-template-rows: min-content 1fr;
   grid-gap: 2rem;
   justify-items: center;
+
   img {
     height: 10rem;
+  }
+
+  @media screen and (max-width: $bpSmaller5) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    align-content: start;
+  }
+
+  @media screen and (max-width: $bpSmaller9) {
+    grid-template-columns: 1fr;
   }
 }
 

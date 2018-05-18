@@ -11,22 +11,39 @@
   transform: translateY(-5rem);
   @include shadow;
   z-index: 2;
+
+  @media screen and (max-width: $bpSmaller6) {
+    display: none;
+  }
 }
 
 .section-reasons {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
-  background-image: linear-gradient(to top right, $colorGreyLight2, $colorGreyLight3);
+  background-image: linear-gradient(
+    to top right,
+    $colorGreyLight2,
+    $colorGreyLight3
+  );
   padding: 5rem;
   width: 100.05%;
   display: grid;
   grid-template-columns: calc(10% + 30vw) 1fr;
   justify-items: center;
+  
+  @media screen and (max-width: $bpSmaller6) {
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
+  }
+
+  @media screen and (max-width: $bpSmaller8) {
+    padding: 6rem 3rem 3rem 3rem;
+  }
 }
 
 .reasons-content {
   // text-align: center;
-
   h3 {
     margin-bottom: 1rem;
+    
   }
 }

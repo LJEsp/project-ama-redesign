@@ -153,6 +153,14 @@ body {
   html *,
   body * {
     box-sizing: inherit; }
+  @media screen and (max-width: 75em) {
+    html,
+    body {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 31.25em) {
+    html,
+    body {
+      font-size: 50%; } }
 
 html {
   background-image: linear-gradient(to top, #dddddd -50%, #fafafafa);
@@ -163,8 +171,12 @@ body {
   background-color: #ffffff;
   margin: 0 auto;
   width: 75%;
-  max-width: 140rem;
+  min-width: 140rem;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3); }
+  @media screen and (max-width: 87.5em) {
+    body {
+      width: 100%;
+      min-width: unset; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -204,13 +216,28 @@ body {
 .section-welcome {
   padding: 0 7rem;
   text-align: center; }
+  @media screen and (max-width: 31.25em) {
+    .section-welcome {
+      padding: 0 3rem; } }
 
 .section-programs {
   text-align: center;
   padding: 0 10rem; }
+  @media screen and (max-width: 68.75em) {
+    .section-programs {
+      padding: 0 5rem; } }
+  @media screen and (max-width: 31.25em) {
+    .section-programs {
+      padding: 0 3rem; } }
 
 .section-reputation {
   padding: 0 10rem; }
+  @media screen and (max-width: 68.75em) {
+    .section-reputation {
+      padding: 0 5rem; } }
+  @media screen and (max-width: 31.25em) {
+    .section-reputation {
+      padding: 0 3rem; } }
 
 .section-abet {
   display: flex;
@@ -224,8 +251,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+@media screen and (max-width: 50em) {
+  .abet-logo {
+    width: 80vw; } }
+
 .section-contact {
-  text-align: center; }
+  text-align: center;
+  padding: 0 5rem; }
+  .section-contact img {
+    width: 50vw;
+    max-width: 30rem; }
+  @media screen and (max-width: 31.25em) {
+    .section-contact {
+      padding: 0 3rem; } }
 
 /*
 This file is used to contain all layout imports.
@@ -244,6 +282,16 @@ to layouts.
   background-color: #8d0404;
   color: #ffffff;
   z-index: 0; }
+  @media screen and (max-width: 68.75em) {
+    .top-bar {
+      width: 100%;
+      border-bottom-left-radius: 0;
+      position: static;
+      top: 0;
+      height: 4rem; } }
+  @media screen and (max-width: 37.5em) {
+    .top-bar {
+      display: none; } }
   .top-bar svg {
     width: 2rem;
     height: 2rem; }
@@ -254,10 +302,18 @@ to layouts.
   margin-top: 2rem;
   color: #ffffff;
   padding: 1rem; }
+  @media screen and (max-width: 68.75em) {
+    .top-bar-left,
+    .top-bar-mid,
+    .top-bar-right {
+      margin-top: 0%; } }
 
 .top-bar-left {
   display: flex;
   margin-left: 4rem; }
+  @media screen and (max-width: 68.75em) {
+    .top-bar-left {
+      margin-left: 0rem; } }
   .top-bar-left p {
     display: flex;
     align-items: center;
@@ -270,6 +326,14 @@ to layouts.
   .top-bar-right svg {
     margin-left: 1rem; }
 
+@media screen and (max-width: 68.75em) {
+  .top-bar-mid {
+    display: none; } }
+
+@media screen and (max-width: 68.75em) {
+  .nav {
+    display: none; } }
+
 .header {
   top: 0;
   display: flex;
@@ -278,6 +342,21 @@ to layouts.
   padding: 3rem 7rem 0rem 7rem;
   background-color: #ffffff;
   z-index: 100; }
+  @media screen and (max-width: 78.125em) {
+    .header {
+      padding: 3rem 4rem 0rem 4rem; } }
+  @media screen and (max-width: 68.75em) {
+    .header {
+      padding: 2rem 4rem 0rem 4rem; } }
+
+.header-tagline {
+  display: none; }
+  @media screen and (max-width: 68.75em) {
+    .header-tagline {
+      display: block; } }
+  @media screen and (max-width: 50em) {
+    .header-tagline {
+      display: none; } }
 
 .header-logo {
   width: auto;
@@ -291,6 +370,9 @@ to layouts.
     padding: 1rem; }
   .header-nav > li a:hover {
     color: #8d0404; }
+  @media screen and (max-width: 68.75em) {
+    .header-nav {
+      display: none; } }
 
 .dropdown-about,
 .dropdown-programs,
@@ -332,37 +414,19 @@ to layouts.
   height: 1.5rem;
   vertical-align: middle; }
 
-.footer {
-  background-color: #222222;
-  padding: 5rem 7rem;
-  color: #aaaaaa; }
+.mobile-nav {
+  display: none;
+  transform: translateY(-1rem); }
+  @media screen and (max-width: 68.75em) {
+    .mobile-nav {
+      display: block; } }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: max-content repeat(3, 1fr);
-  grid-gap: 2rem;
-  justify-items: center; }
-  .footer-grid img {
-    height: 10rem; }
-
-.footer-links {
-  display: flex;
-  flex-flow: column; }
-  .footer-links p {
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 1rem; }
-  .footer-links a {
-    margin-bottom: 1rem; }
-    .footer-links a:hover {
-      text-decoration: underline; }
-
-.footer-info p {
-  margin-bottom: 1rem; }
-
-.copyright {
-  display: block;
-  text-align: center; }
+.mobile-nav-icon {
+  display: none;
+  fill: #8d0404; }
+  @media screen and (max-width: 68.75em) {
+    .mobile-nav-icon {
+      display: block; } }
 
 .gallery {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
@@ -379,20 +443,42 @@ to layouts.
 .gallery-content {
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 50em) {
+    .gallery-content {
+      text-align: center;
+      display: block;
+      width: 70%; } }
 
 .gallery-image {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3);
   margin-right: 3rem;
   width: 40rem; }
+  @media screen and (max-width: 62.5em) {
+    .gallery-image {
+      width: 30rem; } }
+  @media screen and (max-width: 50em) {
+    .gallery-image {
+      display: none; } }
 
 .gallery-text {
   width: 45rem; }
+  @media screen and (max-width: 62.5em) {
+    .gallery-text {
+      width: 35rem; } }
+  @media screen and (max-width: 50em) {
+    .gallery-text {
+      width: unset; } }
 
 .programs-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 2rem; }
+  @media screen and (max-width: 62.5em) {
+    .programs-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem;
+      grid-row-gap: 5rem; } }
 
 .program-box {
   display: flex;
@@ -458,6 +544,9 @@ to layouts.
   transform: translateY(-5rem);
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3);
   z-index: 2; }
+  @media screen and (max-width: 50em) {
+    .section-reasons-image {
+      display: none; } }
 
 .section-reasons {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
@@ -467,6 +556,13 @@ to layouts.
   display: grid;
   grid-template-columns: calc(10% + 30vw) 1fr;
   justify-items: center; }
+  @media screen and (max-width: 50em) {
+    .section-reasons {
+      grid-template-columns: 1fr;
+      padding-bottom: 3rem; } }
+  @media screen and (max-width: 31.25em) {
+    .section-reasons {
+      padding: 6rem 3rem 3rem 3rem; } }
 
 .reasons-content h3 {
   margin-bottom: 1rem; }
@@ -475,18 +571,71 @@ to layouts.
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem; }
+  @media screen and (max-width: 62.5em) {
+    .section-reputation {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem; } }
 
 .reputation-box {
   display: flex;
   flex-flow: column;
   align-items: center;
   text-align: center; }
+  @media screen and (max-width: 62.5em) {
+    .reputation-box {
+      flex-flow: row;
+      text-align: left; } }
   .reputation-box img {
     margin-bottom: 1rem;
     transition: all 0.1s;
     cursor: pointer; }
+    @media screen and (max-width: 62.5em) {
+      .reputation-box img {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        width: 30vw; } }
   .reputation-box p {
     margin-bottom: 1rem; }
+
+.footer {
+  background-color: #222222;
+  padding: 5rem 7rem;
+  color: #aaaaaa; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: max-content repeat(3, 1fr);
+  grid-gap: 2rem;
+  justify-items: center; }
+  .footer-grid img {
+    height: 10rem; }
+  @media screen and (max-width: 62.5em) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: start;
+      align-content: start; } }
+  @media screen and (max-width: 25em) {
+    .footer-grid {
+      grid-template-columns: 1fr; } }
+
+.footer-links {
+  display: flex;
+  flex-flow: column; }
+  .footer-links p {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem; }
+  .footer-links a {
+    margin-bottom: 1rem; }
+    .footer-links a:hover {
+      text-decoration: underline; }
+
+.footer-info p {
+  margin-bottom: 1rem; }
+
+.copyright {
+  display: block;
+  text-align: center; }
 
 /*
 This file is used to contain all component imports.

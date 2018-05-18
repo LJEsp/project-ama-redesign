@@ -1,0 +1,16 @@
+.mobile-nav {
+  display: none;
+  transform: translateY(-1rem);
+  @media screen and (max-width: $bpSmaller4) {
+    display: block;
+  }
+}
+
+.mobile-nav-icon {
+  display: none;
+  fill: $colorRed;
+
+  @media screen and (max-width: $bpSmaller4) {
+    display: block;
+  }
+}
