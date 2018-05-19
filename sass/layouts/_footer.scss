@@ -51,7 +51,16 @@
   }
 }
 
+.footer-social {
+  text-align: center;
+
+  a:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
 .copyright {
   display: block;
   text-align: center;
 }
+

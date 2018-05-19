@@ -1,16 +1,82 @@
 .mobile-nav {
   display: none;
   transform: translateY(-1rem);
+
   @media screen and (max-width: $bpSmaller4) {
     display: block;
   }
 }
 
 .mobile-nav-icon {
+  position: relative;
   display: none;
-  fill: $colorRed;
+  color: $colorRed;
+
+  z-index: 400;
 
   @media screen and (max-width: $bpSmaller4) {
     display: block;
   }
+}
+
+.checkbox-button,
+.checkbox {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkbox-button {
+  position: fixed;
+  right: 3rem;
+  cursor: pointer;
+  z-index: 300;
+
+  @media screen and (max-width: $bpSmaller4) {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.mobile-nav-menu {
+  position: fixed;
+  top: 0;
+  left: -20rem;
+  background-color: $colorGreyLight4;
+  height: 100vh;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s;
+  overflow-y: auto;
+  @include shadow;
+
+  a {
+    display: block;
+    white-space: nowrap;
+    background-color: $colorGreyLight4;
+    padding: 1rem 2rem;
+
+    &:hover {
+      background-color: $colorGreyLight3;
+      color: $colorRed;
+    }
+  }
+
+  p {
+    background-color: $colorGreyLight3;
+    padding: 1rem 2rem;
+  }
+
+  li li a {
+    padding-left: 4rem;
+  }
+}
+
+.checkbox:checked ~ .mobile-nav-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  left: 0;
 }

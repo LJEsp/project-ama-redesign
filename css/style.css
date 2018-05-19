@@ -350,7 +350,8 @@ to layouts.
       padding: 2rem 4rem 0rem 4rem; } }
 
 .header-tagline {
-  display: none; }
+  display: none;
+  margin-right: 15rem; }
   @media screen and (max-width: 68.75em) {
     .header-tagline {
       display: block; } }
@@ -367,7 +368,7 @@ to layouts.
   .header-nav > li {
     position: relative; }
   .header-nav > li a {
-    padding: 1rem; }
+    padding: 1.3rem; }
   .header-nav > li a:hover {
     color: #8d0404; }
   @media screen and (max-width: 68.75em) {
@@ -423,11 +424,62 @@ to layouts.
       display: block; } }
 
 .mobile-nav-icon {
+  position: relative;
   display: none;
-  fill: #8d0404; }
+  color: #8d0404;
+  z-index: 400; }
   @media screen and (max-width: 68.75em) {
     .mobile-nav-icon {
       display: block; } }
+
+.checkbox-button,
+.checkbox {
+  display: none;
+  visibility: hidden;
+  opacity: 0; }
+
+.checkbox-button {
+  position: fixed;
+  right: 3rem;
+  cursor: pointer;
+  z-index: 300; }
+  @media screen and (max-width: 68.75em) {
+    .checkbox-button {
+      display: block;
+      visibility: visible;
+      opacity: 1; } }
+
+.mobile-nav-menu {
+  position: fixed;
+  top: 0;
+  left: -20rem;
+  background-color: #fafafafa;
+  height: 100vh;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s;
+  overflow-y: auto;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3); }
+  .mobile-nav-menu a {
+    display: block;
+    white-space: nowrap;
+    background-color: #fafafafa;
+    padding: 1rem 2rem; }
+    .mobile-nav-menu a:hover {
+      background-color: #eeeeee;
+      color: #8d0404; }
+  .mobile-nav-menu p {
+    background-color: #eeeeee;
+    padding: 1rem 2rem; }
+  .mobile-nav-menu li li a {
+    padding-left: 4rem; }
+
+.checkbox:checked ~ .mobile-nav-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  left: 0; }
 
 .gallery {
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
@@ -448,7 +500,7 @@ to layouts.
     .gallery-content {
       text-align: center;
       display: block;
-      width: 70%; } }
+      width: 80%; } }
 
 .gallery-image {
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.3);
@@ -591,7 +643,8 @@ to layouts.
       .reputation-box img {
         margin-bottom: 0;
         margin-right: 2rem;
-        width: 30vw; } }
+        width: 30vw;
+        max-width: 20rem; } }
   .reputation-box p {
     margin-bottom: 1rem; }
 
@@ -630,6 +683,11 @@ to layouts.
 
 .footer-info p {
   margin-bottom: 1rem; }
+
+.footer-social {
+  text-align: center; }
+  .footer-social a:not(:last-child) {
+    margin-right: 1rem; }
 
 .copyright {
   display: block;
