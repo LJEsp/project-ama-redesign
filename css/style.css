@@ -416,13 +416,6 @@ to layouts.
   height: 1.5rem;
   vertical-align: middle; }
 
-.mobile-nav {
-  display: none;
-  transform: translateY(-1rem); }
-  @media screen and (max-width: 68.75em) {
-    .mobile-nav {
-      display: block; } }
-
 .mobile-nav-icon {
   position: relative;
   display: none;
@@ -455,6 +448,7 @@ to layouts.
   left: -20rem;
   background-color: #fafafafa;
   height: 100vh;
+  padding-top: 1rem;
   z-index: 100;
   visibility: hidden;
   opacity: 0;

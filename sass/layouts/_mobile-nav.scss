@@ -1,12 +1,3 @@
-.mobile-nav {
-  display: none;
-  transform: translateY(-1rem);
-
-  @media screen and (max-width: $bpSmaller4) {
-    display: block;
-  }
-}
-
 .mobile-nav-icon {
   position: relative;
   display: none;
@@ -45,6 +36,7 @@
   left: -20rem;
   background-color: $colorGreyLight4;
   height: 100vh;
+  padding-top: 1rem;
   z-index: 100;
   visibility: hidden;
   opacity: 0;
