@@ -1,5 +1,5 @@
 # project-ama-redesign
-This is a fabulous makeover of the site http://www.ama.edu.ph/.
+This is a fabulous makeover of the site http://www.ama.edu.ph/. Hosted by Github Pages at https://ljesp.github.io/project-ama-redesign/
 
 ## Built With
 * HTML
