@@ -7,21 +7,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gallery-2 {
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  background-image: url(../img/slide-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+
   width: 100.05%;
-  height: 50rem;
 }
 
 .gallery-content {
   display: flex;
   align-items: center;
+  width: 100.05%;
 
   @media screen and (max-width: $bpSmaller6) {
     text-align: center;
     display: block;
     width: 80%;
   }
+}
 
-  
+.gallery-content-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: $bpSmaller6) {
+    text-align: center;
+  }
 }
 
 .gallery-image {
@@ -42,11 +60,10 @@
   width: 45rem;
 
   @media screen and (max-width: $bpSmaller5) {
-    width: 35rem;
+    width: 45rem;
   }
+}
 
-  @media screen and (max-width: $bpSmaller6) {
-    width: unset;
-  }
-
+.slideshow-dotnav {
+  transform: translateY(-7rem);
 }
