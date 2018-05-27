@@ -726,11 +726,13 @@ to a reusable component.
   .button:hover::after {
     content: " >";
     opacity: 1;
-    transform: translateX(0.5rem); }
+    transform: translateX(0.5rem);
+    color: #ffffff; }
   .button:hover {
     padding-right: 3.2rem;
     border: 2px solid #8d0404;
-    background-color: rgba(141, 4, 4, 0.6); }
+    background-color: rgba(141, 4, 4, 0.6);
+    color: #ffffff; }
 
 .button-start {
   display: block;
@@ -754,3 +756,9 @@ to a reusable component.
     color: #8d0404;
     font-weight: 700;
     transform: scale(1.1); }
+
+.totop {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 100; }

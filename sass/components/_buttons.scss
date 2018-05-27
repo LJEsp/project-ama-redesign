@@ -20,12 +20,15 @@
     content: " >";
     opacity: 1;
     transform: translateX(0.5rem);
+    color: $colorWhite;
   }
 
   &:hover {
     padding-right: 3.2rem;
     border: 2px solid $colorRed;
     background-color: rgba($colorRed, 0.6);
+    color: $colorWhite;
+
   }
 }
 
@@ -57,4 +60,13 @@
     font-weight: 700;
     transform: scale(1.1);
   }
+}
+
+.totop {
+  position: fixed;
+
+  right: 3rem;
+  bottom: 3rem;
+
+  z-index: 100;
 }
