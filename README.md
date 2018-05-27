@@ -7,4 +7,4 @@ This is a fabulous makeover of the site http://www.ama.edu.ph/.
 * [UIkit](https://getuikit.com/) - CSS framework
 
 ## Author
-###Leandro Esparrago
+### Leandro Esparrago
